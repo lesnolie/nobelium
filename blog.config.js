@@ -1,24 +1,24 @@
 const BLOG = {
-  title: 'CRAIGARY',
-  author: 'Craig Hart',
-  email: 'i@craigary.net',
-  link: 'https://nobelium.vercel.app',
-  description: 'This gonna be an awesome website.',
-  lang: 'en-US',
-  appearance: 'auto', // ['light', 'dark', 'auto'],
+  title: '熊猫技术志',
+  author: '熊猫小A',
+  email: 'hi@imalan.cn',
+  link: 'https://wiki.imalan.cn',
+  description: '机器学习、通用技巧与日常折腾。',
+  lang: 'zh-CN',
+  appearance: 'dark', // ['light', 'dark', 'auto'],
   font: 'sans-serif', // ['sans-serif', 'serif']
   lightBackground: '#ffffff', // use hex value, don't forget '#' e.g #fffefc
-  darkBackground: '#111827', // use hex value, don't forget '#'
+  darkBackground: '#000000', // use hex value, don't forget '#'
   path: '', // leave this empty unless you want to deploy Nobelium in a folder
-  since: 2021, // if leave this empty, current year will be used.
-  postsPerPage: 7,
-  sortByDate: false,
-  showAbout: true, // WIP
-  showArchive: true, // WIP
+  since: 2017, // if leave this empty, current year will be used.
+  postsPerPage: 10,
+  sortByDate: true,
+  showAbout: false, // WIP
+  showArchive: false, // WIP
   autoCollapsedNavBar: false, // the automatically collapsed navigation bar
-  socialLink: 'https://twitter.com/craigaryhart',
+  socialLink: 'https://twitter.com/alandecode',
   seo: {
-    keywords: ['Blog', 'Website', 'Notion'],
+    keywords: ['Blog', 'Website', 'Notion', 'Wiki', '熊猫小A'],
     googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
   },
   notionPageId: process.env.NOTION_PAGE_ID, // DO NOT CHANGE THIS！！！

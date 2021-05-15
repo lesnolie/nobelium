@@ -4,7 +4,7 @@ export async function getServerSideProps({ res }) {
   res.setHeader('Content-Type', 'text/xml')
   let posts = await getAllPosts()
   posts = posts
-    .filter(post => post.status[0] === 'Published' && post.type[0] === 'Post')
+    .filter(post => post.status[0].toLowerCase() === 'published' && post.type[0].toLowerCase() === 'post')
     .slice(0, 10)
   const xmlFeed = generateRss(posts)
   res.write(xmlFeed)

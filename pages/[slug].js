@@ -27,7 +27,7 @@ const BlogPost = ({ post, blockMap, emailHash }) => {
 
 export async function getStaticPaths() {
   let posts = await getAllPosts()
-  posts = posts.filter(post => post.status[0] === 'Published')
+  posts = posts.filter(post => post.status[0].toLowerCase() === 'published')
   return {
     paths: posts.map(row => `${BLOG.path}/${row.slug}`),
     fallback: true
@@ -36,7 +36,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params: { slug } }) {
   let posts = await getAllPosts()
-  posts = posts.filter(post => post.status[0] === 'Published')
+  posts = posts.filter(post => post.status[0].toLowerCase() === 'published')
   const post = posts.find(t => t.slug === slug)
   const blockMap = await getPostBlocks(post.id)
   const emailHash = createHash('md5').update(BLOG.email).digest('hex')

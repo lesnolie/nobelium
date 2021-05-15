@@ -9,7 +9,7 @@ export async function getStaticProps({ params }) {
   const currentTag = params.tag
   let posts = await getAllPosts()
   posts = posts.filter(
-    post => post.status[0] === 'Published' && post.type[0] === 'Post'
+    post => post.status[0].toLowerCase() === 'published' && post.type[0].toLowerCase() === 'post'
   )
   const tags = await getAllTags()
   const filteredPosts = posts.filter(

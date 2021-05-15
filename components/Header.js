@@ -8,8 +8,7 @@ const NavBar = () => {
   const links = [
     { id: 0, name: locale.NAV.INDEX, to: BLOG.path || '/', show: true },
     { id: 1, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout },
-    { id: 2, name: locale.NAV.RSS, to: '/feed', show: true },
-    { id: 3, name: locale.NAV.SEARCH, to: '/search', show: true }
+    { id: 2, name: locale.NAV.SEARCH, to: '/search', show: true }
   ]
   return (
     <div className="flex-shrink-0">
@@ -66,33 +65,7 @@ const Header = ({ navBarTitle, fullWidth }) => {
           <Link href="/">
             <a>
               <div className="h-6">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    width="24"
-                    height="24"
-                    className="fill-current text-black dark:text-white"
-                  />
-                  <rect width="24" height="24" fill="url(#paint0_radial)" />
-                  <defs>
-                    <radialGradient
-                      id="paint0_radial"
-                      cx="0"
-                      cy="0"
-                      r="1"
-                      gradientUnits="userSpaceOnUse"
-                      gradientTransform="rotate(45) scale(39.598)"
-                    >
-                      <stop stopColor="#CFCFCF" stopOpacity="0.6" />
-                      <stop offset="1" stopColor="#E9E9E9" stopOpacity="0" />
-                    </radialGradient>
-                  </defs>
-                </svg>
+                <img style={{ width: '24px', height: '24px' }} src="/avatar.svg"></img>
               </div>
             </a>
           </Link>
@@ -102,8 +75,7 @@ const Header = ({ navBarTitle, fullWidth }) => {
             </p>
           ) : (
             <p className="ml-2 font-medium text-day dark:text-night header-name">
-              {BLOG.title},{' '}
-              <span className="font-normal">{BLOG.description}</span>
+              {BLOG.title}
             </p>
           )}
         </div>
