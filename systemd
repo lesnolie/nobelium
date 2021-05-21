@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve API
+After=network.target
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/Documents/nobelium
+Environment="NOTION_PAGE_ID="
+Environment="NOTION_ACCESS_TOKEN="
+ExecStart=/usr/bin/npm run start
+
+[Install]
+WantedBy=multi-user.target
