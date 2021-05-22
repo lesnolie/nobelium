@@ -69,3 +69,7 @@ pre[class*='language-'] {
 .notion-collection-row {
   @apply hidden;
 }
+
+.notion-list {
+  max-width: 100%;
+}

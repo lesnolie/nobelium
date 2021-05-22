@@ -5,7 +5,7 @@ const BLOG = {
   link: 'https://wiki.imalan.cn',
   description: '机器学习、通用技巧与日常折腾。',
   lang: 'zh-CN',
-  appearance: 'dark', // ['light', 'dark', 'auto'],
+  appearance: 'light', // ['light', 'dark', 'auto'],
   font: 'sans-serif', // ['sans-serif', 'serif']
   lightBackground: '#ffffff', // use hex value, don't forget '#' e.g #fffefc
   darkBackground: '#000000', // use hex value, don't forget '#'
